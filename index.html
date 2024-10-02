@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParkSmart</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/normalize.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+    
+    <nav class="navbar"></nav>
+
+    <div class="main-div">
+        <div class="topbar"></div>
+
+        <main class="main-section">
+            <div class="parking-div">
+                <div class="left-road"></div>
+
+                <div class="parking-center">
+                    <div class="upper-road"></div>
+                    <div class="top-parking">
+                        <div class="grid-container">
+                            <div class="grid-item" id="A1">A1</div>
+                            <div class="grid-item" id="A2">A2</div>
+                            <div class="grid-item" id="A3">A3</div>
+                            <div class="grid-item" id="A4">A4</div>
+                            <div class="grid-item" id="A5">A5</div>
+                            <div class="grid-item" id="A6">A6</div>
+                            <div class="grid-item" id="A7">A7</div>
+                            <div class="grid-item" id="A8">A8</div>
+                            <div class="grid-item" id="A9">A9</div>
+                            <div class="grid-item" id="A10">A10</div>
+                            <div class="grid-item" id="A11">A11</div>
+                            <div class="grid-item" id="A12">A12</div>
+                            <div class="grid-item" id="A13">A13</div>
+                            <div class="grid-item" id="A14">A14</div>
+                        </div>
+                    </div>
+
+                    <div class="middle-road"></div>
+
+                    <div class="bottom-parking">
+                        <div class="grid-container">
+                            <div class="grid-item" id="B1">B1</div>
+                            <div class="grid-item" id="B2">B2</div>
+                            <div class="grid-item" id="B3">B3</div>
+                            <div class="grid-item" id="B4">B4</div>
+                            <div class="grid-item" id="B5">B5</div>
+                            <div class="grid-item" id="B6">B6</div>
+                            <div class="grid-item" id="B7">B7</div>
+                            <div class="grid-item" id="B8">B8</div>
+                            <div class="grid-item" id="B9">B9</div>
+                            <div class="grid-item" id="B10">B10</div>
+                            <div class="grid-item" id="B11">B11</div>
+                            <div class="grid-item" id="B12">B12</div>
+                            <div class="grid-item" id="B13">B13</div>
+                            <div class="grid-item" id="B14">B14</div>
+                        </div>
+                    </div>
+
+                    <div class="bottom-road"></div>
+                </div>
+                
+                <div class="right-road"></div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function toggleParkingSpot(event) {
+            if (event.target.classList.contains('occupied')) {
+                event.target.classList.remove('occupied');
+                event.target.innerHTML = event.target.id;
+            } else {
+                event.target.classList.add('occupied');
+                event.target.innerHTML = '🚗';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const parkingSpots = document.querySelectorAll('.grid-item');
+            parkingSpots.forEach(spot => {
+                spot.addEventListener('click', toggleParkingSpot);
+            });
+        });
+    </script>
+</body>
+</html>
