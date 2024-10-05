@@ -2,9 +2,9 @@ function toggleParkingSpot(event) {
     const gridItem = event.target.closest('.grid-item'); 
     
     const carImages = [
-        '../images/car1.png',
-        '../images/car4.png',
-        '../images/car5.png'
+        './images/car1.png',
+        './images/car4.png',
+        './images/car5.png'
     ];
 
     if (gridItem.classList.contains('occupied')) {
@@ -21,7 +21,7 @@ function toggleParkingSpot(event) {
         img.src = randomCarImage;
         img.alt = 'Car';
         img.style.width = '80%';
-        img.style.height = '50%';
+        img.style.height = '100%';
         img.style.objectFit = 'contain';
         img.style.borderRadius = '5px'; 
 

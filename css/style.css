@@ -1,15 +1,23 @@
-/* CSS for the HTML structure */
 body {
+    width: 2060px; 
+    height: 1000px;   
     display: flex;
     flex-direction: row;
     resize: none;
     margin: 0;
+    overflow: hidden; 
+}
+
+* {
+    zoom: 1;
+    transform: scale(1);
+    transform-origin: top left;
 }
 
 .navbar {
     background-color: rgb(0, 204, 255);
     width: 280px;
-    height: 100vh;
+    height: 978px;
 }
 
 .main-div {
@@ -39,23 +47,20 @@ body {
     margin: auto auto;
 }
 
-.left-road,
-.right-road {
-    background-image: url('../images/road-leftandright.png');
-    background-size: cover;
-    position: relative;
-    width: 5%;
-    height: 100%;
-}
-
-.upper-road, 
-.middle-road, 
-.bottom-road {
-    background-image: url('../images/road.png');
+.left-road, .right-road {
+    background-image: url(../images/road-leftandright.png);
     background-size: contain;
     position: relative;
     width: 100%;
-    height: 12%;
+    height: 846px;
+}
+
+.upper-road, .middle-road, .bottom-road {
+    background-image: url(../images/road.png);
+    background-size: contain;
+    position: relative;
+    width: 100%;
+    height: 115px;
 }
 
 .parking-center {
@@ -63,14 +68,13 @@ body {
     height: 100%;
 }
 
-.top-parking, 
-.bottom-parking {
+.top-parking, .bottom-parking {
     resize: none;
-    background-image: url('../images/parkinglot2.png');
+    background-image: url(../images/parkinglot2.png);
     background-size: contain;
     background-position: left;
-    width: 100%;
-    overflow: auto;
+    width: auto;
+    overflow: hidden;
     padding: 0;
     margin: 0;
 }
@@ -88,7 +92,7 @@ body {
     align-content: center;
     margin-left: 0px;
     display: grid;
-    grid-template-columns: repeat(12, 122px);
+    grid-template-columns: repeat(13, 121px);
     grid-gap: 4px;
     padding: 0;
     height: 100%;
