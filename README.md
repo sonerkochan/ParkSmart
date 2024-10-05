@@ -190,7 +190,6 @@ JavaScript
         
         This ensures that the parking spots are interactive once the page has fully loaded.
 
-Images
-    
+
 Conclusion
     This documentation provides an overview of the ParkSmart parking system. It covers how the HTML defines the page structure, how CSS styles the layout, and how JavaScript provides interactivity. This system allows users to click on parking spots and simulate their occupancy dynamically.
