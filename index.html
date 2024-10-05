@@ -6,10 +6,9 @@
     <title>ParkSmart</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
     <link rel="stylesheet" href="css/normalize.css"/>
-    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/style.css"/> <!-- External CSS -->
 </head>
 <body>
-    
     <nav class="navbar"></nav>
 
     <div class="main-div">
@@ -37,6 +36,16 @@
                             <div class="grid-item" id="A12">A12</div>
                             <div class="grid-item" id="A13">A13</div>
                             <div class="grid-item" id="A14">A14</div>
+                            <div class="grid-item" id="A15">A15</div>
+                            <div class="grid-item" id="A16">A16</div>
+                            <div class="grid-item" id="A17">A17</div>
+                            <div class="grid-item" id="A18">A18</div>
+                            <div class="grid-item" id="A19">A19</div>
+                            <div class="grid-item" id="A20">A20</div>
+                            <div class="grid-item" id="A21">A21</div>
+                            <div class="grid-item" id="A22">A22</div>
+                            <div class="grid-item" id="A23">A23</div>
+                            <div class="grid-item" id="A24">A24</div>
                         </div>
                     </div>
 
@@ -58,34 +67,27 @@
                             <div class="grid-item" id="B12">B12</div>
                             <div class="grid-item" id="B13">B13</div>
                             <div class="grid-item" id="B14">B14</div>
+                            <div class="grid-item" id="A15">B15</div>
+                            <div class="grid-item" id="B16">B16</div>
+                            <div class="grid-item" id="B17">B17</div>
+                            <div class="grid-item" id="B18">B18</div>
+                            <div class="grid-item" id="B19">B19</div>
+                            <div class="grid-item" id="B20">B20</div>
+                            <div class="grid-item" id="B21">B21</div>
+                            <div class="grid-item" id="B22">B22</div>
+                            <div class="grid-item" id="B23">B23</div>
+                            <div class="grid-item" id="B24">B24</div>
                         </div>
                     </div>
 
                     <div class="bottom-road"></div>
                 </div>
-                
+
                 <div class="right-road"></div>
             </div>
         </main>
     </div>
 
-    <script>
-        function toggleParkingSpot(event) {
-            if (event.target.classList.contains('occupied')) {
-                event.target.classList.remove('occupied');
-                event.target.innerHTML = event.target.id;
-            } else {
-                event.target.classList.add('occupied');
-                event.target.innerHTML = '🚗';
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const parkingSpots = document.querySelectorAll('.grid-item');
-            parkingSpots.forEach(spot => {
-                spot.addEventListener('click', toggleParkingSpot);
-            });
-        });
-    </script>
+    <script src="js/carsShow.js"></script> <!-- External JS -->
 </body>
 </html>
