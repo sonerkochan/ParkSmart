@@ -16,8 +16,12 @@ body {
 
 .navbar {
     background-color: rgb(0, 204, 255);
-    width: 280px;
-    height: 978px;
+    width: 20vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    flex-direction: column; /* Stack items vertically */
 }
 
 .main-div {
@@ -27,13 +31,9 @@ body {
     width: 100vw;
 }
 
-.topbar {
-    background-color: green;
-    height: 150px;
-}
-
 .main-section {
-    height: 100vh;
+    height: 90vh;
+    width: 80vw;
     display: flex;
     flex-direction: row;
 }
@@ -92,11 +92,21 @@ body {
     align-content: center;
     margin-left: 0px;
     display: grid;
-    grid-template-columns: repeat(13, 121px);
     grid-gap: 4px;
     padding: 0;
     height: 100%;
+    width: 100vw;
     box-sizing: border-box;
+}
+
+/* Top Parking Grid */
+.top-parking .grid-container {
+    grid-template-columns: repeat(9, 121px); /* 9 columns for A1 to A9 */
+}
+
+/* Bottom Parking Grid */
+.bottom-parking .grid-container {
+    grid-template-columns: repeat(9, 121px); /* 9 columns for B1 to B9 */
 }
 
 .grid-item {
@@ -121,4 +131,45 @@ body {
 
 .grid-item.occupied {
     font-size: 40px;
+}
+
+
+/*Counter*/
+
+.counter-container {
+    font-size: 24px; /* Adjust font size */
+    font-weight: bold; /* Make text bold */
+    color: #fff; /* Change text color to white */
+    text-align: center; /* Center the text */
+    margin-top: 20px; /* Add some space above the counter */
+    padding: 10px; /* Add padding for better touch target */
+    border: 2px solid #fff; /* Add a border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    width: 80%; /* Adjust width as needed */
+}
+
+
+.free-spaces {
+    color: white; /* Change color as needed */
+    font-size: 18px; /* Adjust font size */
+    padding: 10px; /* Add some padding */
+}
+
+
+.counter-label {
+    font-size: 18px; /* Adjust size as needed */
+    font-weight: bold;
+    color: #333; /* Dark color for label */
+    margin-right: 5px; /* Space between label and value */
+}
+
+.counter-value {
+    font-size: 20px; /* Larger size for visibility */
+    font-weight: bold;
+    color: #007bff; /* Color for the counter value */
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #e7f3ff; /* Light blue background */
+    border: 1px solid #007bff; /* Border to match the value color */
 }
